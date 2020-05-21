@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-unresolved
 import Ripple from 'react-native-material-ripple';
 import Button from './Button';
-import Checkbox from './CheckBox';
+import Checkbox from './Checkbox';
 import NumPad from './NumPad';
 import Popup from './Popup';
 import RadioButton from './RadioButton';
