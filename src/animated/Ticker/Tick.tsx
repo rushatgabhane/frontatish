@@ -44,7 +44,17 @@ class Tick extends React.PureComponent<TickProps> {
     const { styles } = this.props;
     const transformStyle = getTranslateStyle(this.animation);
     return (
-      <Animated.View style={[transformStyle]}>
+      <Animated.View
+        style={[
+          transformStyle,
+          {
+            // flex:1,
+            // justifyContent: 'center',
+            alignItems: 'center',
+            // backgroundColor: 'grey',
+          },
+        ]}
+      >
         {numberRange.map((v) => {
           return (
             <Text key={v} style={styles.text}>

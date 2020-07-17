@@ -5,8 +5,6 @@ import { StyleType } from '../../common/types';
 import { Fonts } from '../../styles';
 import Tick from './Tick';
 
-let styles;
-
 interface TickerProps {
   text: string;
   type: string;
@@ -35,12 +33,12 @@ class Ticker extends Component<TickerProps, TickerState> {
 
   render() {
     const { Colors } = this.props;
-    styles = styleSheet(Colors);
+    const styles = styleSheet(Colors);
     const { height, measured } = this.state;
     const wrapStyle = measured ? { height } : styles.measure;
     const { type, textStyle } = this.props;
     let { text } = this.props;
-
+    console.log('Height is ->', height);
     // just in case to handle crashes
     if (text && typeof text === 'number') {
       text = text.toFixed(1);
@@ -86,13 +84,19 @@ const styleSheet = (Colors: any) =>
     row: {
       overflow: 'hidden',
       flexDirection: 'row',
+      alignItems: 'baseline',
+      // alignItems:'center',
+      // backgroundColor: 'blue',
+      marginHorizontal: 10,
     },
     text: {
+      // flex: 1,
       fontSize: Fonts.size.h1,
+      // backgroundColor:'red',
       fontWeight: 'bold',
       fontStyle: 'normal',
       // letterSpacing: -0.29,
-      textAlign: 'left',
+      // textAlign: 'center',
       color: Colors.primary,
     },
   });
