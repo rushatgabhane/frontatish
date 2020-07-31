@@ -1,5 +1,5 @@
 // example usage of button component
-import * as React from 'react';
+import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 
 // eslint-disable-next-line import/no-unresolved

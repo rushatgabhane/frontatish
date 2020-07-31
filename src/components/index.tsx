@@ -7,11 +7,13 @@ import Table from './Table';
 import Switch from './Switch';
 import Slider from './Slider';
 import Calendar from './Calendar';
+import LazyView from './LazyView';
 
 export {
   Button,
   Checkbox,
   Calendar,
+  LazyView,
   NumPad,
   RadioButton,
   Ripple,
