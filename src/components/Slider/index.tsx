@@ -47,8 +47,8 @@ const Slider = (props: SliderProps) => {
       //   // console.log('norm', norm);
       //   // setValue(normalizedValue);
       // },
-      // listener: (e, gestureState) =>
-      //   console.log('event is', e, 'gest', gestureState),
+      listener: (e, gestureState) =>
+        console.log('event is', { ...e.nativeEvent }),
     });
 
   // pan.setValue(nativeEvent.translationX);
@@ -59,7 +59,7 @@ const Slider = (props: SliderProps) => {
       latestX += e.nativeEvent.translationX;
       // console.log(pan.flattenOffset);
       // console.log(pan.setOffset);
-      console.log(e.nativeEvent);
+      // console.log(e.nativeEvent);
       pan.setOffset(latestX);
       pan.setValue(0);
       // Animated.spring(pan, {
@@ -82,6 +82,7 @@ const Slider = (props: SliderProps) => {
       <PanGestureHandler
         onGestureEvent={onGestureEvent}
         onHandlerStateChange={onHandlerStateChage}
+        maxDeltaX={barWidth}
       >
         <Animated.View
           style={{
