@@ -7,12 +7,16 @@
   "types": "lib/typescript/src/index.d.ts",
   "react-native": "src/index.tsx",
   "source": "src/index.tsx",
+  "private": true,
   "files": [
     "src",
     "lib",
     "android",
     "ios",
     "viserion.podspec"
+  ],
+  "workspaces": [
+    "packages/*"
   ],
   "scripts": {
     "test": "jest",
